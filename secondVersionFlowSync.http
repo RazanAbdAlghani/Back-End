@@ -1,0 +1,6 @@
+@secondVersionFlowSync_HostAddress = http://localhost:5249
+
+GET {{secondVersionFlowSync_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

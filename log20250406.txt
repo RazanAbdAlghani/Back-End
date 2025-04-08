@@ -1,0 +1,476 @@
+2025-04-06 01:53:11.807 +02:00 [INF] User profile is available. Using 'C:\Users\hp\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-06 01:53:12.041 +02:00 [INF] Now listening on: https://localhost:7142
+2025-04-06 01:53:12.043 +02:00 [INF] Now listening on: http://localhost:5249
+2025-04-06 01:53:12.045 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-06 01:53:12.046 +02:00 [INF] Hosting environment: Development
+2025-04-06 01:53:12.047 +02:00 [INF] Content root path: C:\Users\hp\Desktop\asp1\secondVersionFlowSync
+2025-04-06 01:53:12.754 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7142/swagger/index.html - null null
+2025-04-06 01:53:13.078 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7142/swagger/index.html - 200 null text/html;charset=utf-8 325.3435ms
+2025-04-06 01:53:13.085 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7142/_vs/browserLink - null null
+2025-04-06 01:53:13.089 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7142/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-06 01:53:13.173 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7142/_framework/aspnetcore-browser-refresh.js - 200 13778 application/javascript; charset=utf-8 83.1588ms
+2025-04-06 01:53:13.208 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7142/_vs/browserLink - 200 null text/javascript; charset=UTF-8 124.2567ms
+2025-04-06 01:53:13.279 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7142/swagger/v1/swagger.json - null null
+2025-04-06 01:53:13.456 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - secondVersionFlowSync.Controllers.AccountController.confirmEmail (secondVersionFlowSync). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-04-06 01:53:13.508 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7142/swagger/v1/swagger.json - 500 null application/problem+json 229.1993ms
+2025-04-06 01:53:38.027 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7142/swagger/index.html - null null
+2025-04-06 01:53:38.057 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7142/swagger/index.html - 200 null text/html;charset=utf-8 30.167ms
+2025-04-06 01:53:38.121 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7142/swagger/swagger-ui.css - null null
+2025-04-06 01:53:38.128 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7142/swagger/swagger-ui-standalone-preset.js - null null
+2025-04-06 01:53:38.128 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7142/swagger/swagger-ui-bundle.js - null null
+2025-04-06 01:53:38.128 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7142/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-06 01:53:38.130 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7142/_vs/browserLink - null null
+2025-04-06 01:53:38.141 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7142/_framework/aspnetcore-browser-refresh.js - 200 13778 application/javascript; charset=utf-8 13.4131ms
+2025-04-06 01:53:38.185 +02:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2025-04-06 01:53:38.185 +02:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2025-04-06 01:53:38.187 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7142/_vs/browserLink - 200 null text/javascript; charset=UTF-8 57.71ms
+2025-04-06 01:53:38.190 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7142/swagger/swagger-ui-standalone-preset.js - 200 339486 text/javascript 62.3184ms
+2025-04-06 01:53:38.191 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7142/swagger/swagger-ui.css - 200 143943 text/css 69.7061ms
+2025-04-06 01:53:38.216 +02:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2025-04-06 01:53:38.219 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7142/swagger/swagger-ui-bundle.js - 200 1096145 text/javascript 91.1186ms
+2025-04-06 01:53:38.487 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7142/swagger/v1/swagger.json - null null
+2025-04-06 01:53:38.501 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - secondVersionFlowSync.Controllers.AccountController.confirmEmail (secondVersionFlowSync). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-04-06 01:53:38.507 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7142/swagger/v1/swagger.json - 500 null application/problem+json 19.1078ms
+2025-04-06 01:53:38.548 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7142/swagger/favicon-32x32.png - null null
+2025-04-06 01:53:38.550 +02:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2025-04-06 01:53:38.552 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7142/swagger/favicon-32x32.png - 200 628 image/png 4.1097ms
+2025-04-06 01:54:47.040 +02:00 [INF] User profile is available. Using 'C:\Users\hp\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-06 01:54:47.187 +02:00 [INF] Now listening on: https://localhost:7142
+2025-04-06 01:54:47.188 +02:00 [INF] Now listening on: http://localhost:5249
+2025-04-06 01:54:47.191 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-06 01:54:47.192 +02:00 [INF] Hosting environment: Development
+2025-04-06 01:54:47.193 +02:00 [INF] Content root path: C:\Users\hp\Desktop\asp1\secondVersionFlowSync
+2025-04-06 01:54:47.624 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7142/swagger/index.html - null null
+2025-04-06 01:54:47.981 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7142/swagger/index.html - 200 null text/html;charset=utf-8 360.3336ms
+2025-04-06 01:54:47.985 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7142/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-06 01:54:47.993 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7142/_vs/browserLink - null null
+2025-04-06 01:54:48.011 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7142/_framework/aspnetcore-browser-refresh.js - 200 13778 application/javascript; charset=utf-8 25.697ms
+2025-04-06 01:54:48.041 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7142/_vs/browserLink - 200 null text/javascript; charset=UTF-8 48.2468ms
+2025-04-06 01:54:48.117 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7142/swagger/v1/swagger.json - null null
+2025-04-06 01:54:48.297 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7142/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 179.6493ms
+2025-04-06 01:56:08.958 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7142/api/Account?body=%3Ch1%3Ethis%20is%20Test%20Email%3C%2Fh1%3E - null 0
+2025-04-06 01:56:08.973 +02:00 [INF] Executing endpoint 'secondVersionFlowSync.Controllers.AccountController.SendEmail (secondVersionFlowSync)'
+2025-04-06 01:56:09.010 +02:00 [INF] Route matched with {action = "SendEmail", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult SendEmail(System.String) on controller secondVersionFlowSync.Controllers.AccountController (secondVersionFlowSync).
+2025-04-06 01:56:17.143 +02:00 [INF] Executed action secondVersionFlowSync.Controllers.AccountController.SendEmail (secondVersionFlowSync) in 8127.8995ms
+2025-04-06 01:56:17.147 +02:00 [INF] Executed endpoint 'secondVersionFlowSync.Controllers.AccountController.SendEmail (secondVersionFlowSync)'
+2025-04-06 01:56:17.151 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+MailKit.Security.AuthenticationException: 535: 5.7.3 Authentication unsuccessful [MI2P293CA0015.ITAP293.PROD.OUTLOOK.COM 2025-04-05T23:56:17.490Z 08DD7490174DD666]
+ ---> MailKit.Net.Smtp.SmtpCommandException: 5.7.3 Authentication unsuccessful [MI2P293CA0015.ITAP293.PROD.OUTLOOK.COM 2025-04-05T23:56:17.490Z 08DD7490174DD666]
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.Authenticate(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(Encoding encoding, String userName, String password, CancellationToken cancellationToken)
+   at MailKit.MailService.Authenticate(String userName, String password, CancellationToken cancellationToken)
+   at secondVersionFlowSync.Controllers.AccountController.SendEmail(String body) in C:\Users\hp\Desktop\asp1\secondVersionFlowSync\Controllers\AccountController.cs:line 117
+   at lambda_method2(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-04-06 01:56:17.216 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7142/api/Account?body=%3Ch1%3Ethis%20is%20Test%20Email%3C%2Fh1%3E - 500 null application/problem+json; charset=utf-8 8258.199ms
+2025-04-06 02:00:36.910 +02:00 [INF] User profile is available. Using 'C:\Users\hp\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-06 02:00:37.048 +02:00 [INF] Now listening on: https://localhost:7142
+2025-04-06 02:00:37.049 +02:00 [INF] Now listening on: http://localhost:5249
+2025-04-06 02:00:37.052 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-06 02:00:37.054 +02:00 [INF] Hosting environment: Development
+2025-04-06 02:00:37.054 +02:00 [INF] Content root path: C:\Users\hp\Desktop\asp1\secondVersionFlowSync
+2025-04-06 02:00:37.721 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7142/swagger/index.html - null null
+2025-04-06 02:00:38.204 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7142/swagger/index.html - 200 null text/html;charset=utf-8 485.2307ms
+2025-04-06 02:00:38.216 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7142/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-06 02:00:38.224 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7142/_framework/aspnetcore-browser-refresh.js - 200 13778 application/javascript; charset=utf-8 8.4833ms
+2025-04-06 02:00:38.257 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7142/_vs/browserLink - null null
+2025-04-06 02:00:38.286 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7142/_vs/browserLink - 200 null text/javascript; charset=UTF-8 29.4245ms
+2025-04-06 02:00:38.455 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7142/swagger/v1/swagger.json - null null
+2025-04-06 02:00:38.619 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7142/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 163.9428ms
+2025-04-06 02:00:57.903 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7142/api/Account?body=%3Ch1%3ETest%20Email%3C%2Fh1%3E - null 0
+2025-04-06 02:00:57.917 +02:00 [INF] Executing endpoint 'secondVersionFlowSync.Controllers.AccountController.SendEmail (secondVersionFlowSync)'
+2025-04-06 02:00:57.943 +02:00 [INF] Route matched with {action = "SendEmail", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult SendEmail(System.String) on controller secondVersionFlowSync.Controllers.AccountController (secondVersionFlowSync).
+2025-04-06 02:00:58.115 +02:00 [INF] Executed action secondVersionFlowSync.Controllers.AccountController.SendEmail (secondVersionFlowSync) in 167.185ms
+2025-04-06 02:00:58.117 +02:00 [INF] Executed endpoint 'secondVersionFlowSync.Controllers.AccountController.SendEmail (secondVersionFlowSync)'
+2025-04-06 02:00:58.120 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.UriFormatException: Invalid URI: The hostname could not be parsed.
+   at System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind, UriCreationOptions& creationOptions)
+   at System.Uri..ctor(String uriString)
+   at MailKit.Net.Smtp.SmtpClient.ComputeDefaultValues(String host, Int32& port, SecureSocketOptions& options, Uri& uri, Boolean& starttls)
+   at MailKit.Net.Smtp.SmtpClient.Connect(String host, Int32 port, SecureSocketOptions options, CancellationToken cancellationToken)
+   at secondVersionFlowSync.Controllers.AccountController.SendEmail(String body) in C:\Users\hp\Desktop\asp1\secondVersionFlowSync\Controllers\AccountController.cs:line 116
+   at lambda_method2(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-04-06 02:00:58.173 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7142/api/Account?body=%3Ch1%3ETest%20Email%3C%2Fh1%3E - 500 null application/problem+json; charset=utf-8 269.7518ms
+2025-04-06 02:02:04.560 +02:00 [INF] User profile is available. Using 'C:\Users\hp\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-06 02:02:04.707 +02:00 [INF] Now listening on: https://localhost:7142
+2025-04-06 02:02:04.708 +02:00 [INF] Now listening on: http://localhost:5249
+2025-04-06 02:02:04.711 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-06 02:02:04.712 +02:00 [INF] Hosting environment: Development
+2025-04-06 02:02:04.713 +02:00 [INF] Content root path: C:\Users\hp\Desktop\asp1\secondVersionFlowSync
+2025-04-06 02:02:05.227 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7142/swagger/index.html - null null
+2025-04-06 02:02:05.581 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7142/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-06 02:02:05.581 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7142/_vs/browserLink - null null
+2025-04-06 02:02:05.586 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7142/swagger/index.html - 200 null text/html;charset=utf-8 363.8961ms
+2025-04-06 02:02:05.608 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7142/_framework/aspnetcore-browser-refresh.js - 200 13778 application/javascript; charset=utf-8 26.464ms
+2025-04-06 02:02:05.649 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7142/_vs/browserLink - 200 null text/javascript; charset=UTF-8 68.0158ms
+2025-04-06 02:02:05.717 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7142/swagger/v1/swagger.json - null null
+2025-04-06 02:02:05.873 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7142/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 156.2917ms
+2025-04-06 02:02:22.457 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7142/api/Account?body=%3Ch1%3ETest%20Email%3C%2Fh1%3E - null 0
+2025-04-06 02:02:22.472 +02:00 [INF] Executing endpoint 'secondVersionFlowSync.Controllers.AccountController.SendEmail (secondVersionFlowSync)'
+2025-04-06 02:02:22.498 +02:00 [INF] Route matched with {action = "SendEmail", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult SendEmail(System.String) on controller secondVersionFlowSync.Controllers.AccountController (secondVersionFlowSync).
+2025-04-06 02:02:26.171 +02:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2025-04-06 02:02:26.176 +02:00 [INF] Executed action secondVersionFlowSync.Controllers.AccountController.SendEmail (secondVersionFlowSync) in 3672.7684ms
+2025-04-06 02:02:26.177 +02:00 [INF] Executed endpoint 'secondVersionFlowSync.Controllers.AccountController.SendEmail (secondVersionFlowSync)'
+2025-04-06 02:02:26.179 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7142/api/Account?body=%3Ch1%3ETest%20Email%3C%2Fh1%3E - 200 0 null 3721.9983ms
+2025-04-06 02:35:21.328 +02:00 [INF] User profile is available. Using 'C:\Users\hp\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-06 02:35:21.451 +02:00 [INF] Now listening on: https://localhost:7142
+2025-04-06 02:35:21.453 +02:00 [INF] Now listening on: http://localhost:5249
+2025-04-06 02:35:21.455 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-06 02:35:21.456 +02:00 [INF] Hosting environment: Development
+2025-04-06 02:35:21.457 +02:00 [INF] Content root path: C:\Users\hp\Desktop\asp1\secondVersionFlowSync
+2025-04-06 02:35:22.104 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7142/swagger/index.html - null null
+2025-04-06 02:35:22.422 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7142/swagger/index.html - 200 null text/html;charset=utf-8 319.5882ms
+2025-04-06 02:35:22.434 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7142/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-06 02:35:22.439 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7142/_vs/browserLink - null null
+2025-04-06 02:35:22.477 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7142/_framework/aspnetcore-browser-refresh.js - 200 13778 application/javascript; charset=utf-8 42.8269ms
+2025-04-06 02:35:22.757 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7142/_vs/browserLink - 200 null text/javascript; charset=UTF-8 318.0609ms
+2025-04-06 02:35:22.865 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7142/swagger/v1/swagger.json - null null
+2025-04-06 02:35:23.278 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7142/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 413.1692ms
+2025-04-06 02:37:04.475 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7142/api/Account - application/json 104
+2025-04-06 02:37:04.487 +02:00 [INF] Executing endpoint 'secondVersionFlowSync.Controllers.AccountController.SendEmail (secondVersionFlowSync)'
+2025-04-06 02:37:04.517 +02:00 [INF] Route matched with {action = "SendEmail", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult SendEmail(secondVersionFlowSync.DTOs.EmailDto) on controller secondVersionFlowSync.Controllers.AccountController (secondVersionFlowSync).
+2025-04-06 02:37:07.954 +02:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2025-04-06 02:37:07.958 +02:00 [INF] Executed action secondVersionFlowSync.Controllers.AccountController.SendEmail (secondVersionFlowSync) in 3436.677ms
+2025-04-06 02:37:07.959 +02:00 [INF] Executed endpoint 'secondVersionFlowSync.Controllers.AccountController.SendEmail (secondVersionFlowSync)'
+2025-04-06 02:37:07.961 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7142/api/Account - 200 0 null 3486.4239ms
+2025-04-06 04:08:50.109 +02:00 [INF] User profile is available. Using 'C:\Users\hp\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-06 04:08:50.304 +02:00 [INF] Now listening on: https://localhost:7142
+2025-04-06 04:08:50.305 +02:00 [INF] Now listening on: http://localhost:5249
+2025-04-06 04:08:50.309 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-06 04:08:50.311 +02:00 [INF] Hosting environment: Development
+2025-04-06 04:08:50.312 +02:00 [INF] Content root path: C:\Users\hp\Desktop\asp1\secondVersionFlowSync
+2025-04-06 04:08:51.308 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7142/swagger/index.html - null null
+2025-04-06 04:08:51.573 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7142/swagger/index.html - 200 null text/html;charset=utf-8 264.6765ms
+2025-04-06 04:08:51.577 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7142/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-06 04:08:51.578 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7142/_vs/browserLink - null null
+2025-04-06 04:08:51.606 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7142/_framework/aspnetcore-browser-refresh.js - 200 13778 application/javascript; charset=utf-8 28.5962ms
+2025-04-06 04:08:51.634 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7142/_vs/browserLink - 200 null text/javascript; charset=UTF-8 56.0852ms
+2025-04-06 04:08:51.684 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7142/swagger/v1/swagger.json - null null
+2025-04-06 04:08:51.868 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7142/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 183.2895ms
+2025-04-06 04:15:37.193 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7142/api/Account/register - application/json 173
+2025-04-06 04:15:37.208 +02:00 [INF] Executing endpoint 'secondVersionFlowSync.Controllers.AccountController.Register (secondVersionFlowSync)'
+2025-04-06 04:15:37.243 +02:00 [INF] Route matched with {action = "Register", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(secondVersionFlowSync.DTOs.Auth.RegisterDto) on controller secondVersionFlowSync.Controllers.AccountController (secondVersionFlowSync).
+2025-04-06 04:15:38.833 +02:00 [INF] Executed DbCommand (58ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LeaderID], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Major], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[PictureURL], [a].[Role], [a].[SecurityStamp], [a].[Status], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2025-04-06 04:15:38.872 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LeaderID], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Major], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[PictureURL], [a].[Role], [a].[SecurityStamp], [a].[Status], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-04-06 04:15:38.976 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LeaderID], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Major], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[PictureURL], [a].[Role], [a].[SecurityStamp], [a].[Status], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-04-06 04:15:39.227 +02:00 [INF] Executed DbCommand (11ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 255), @p3='?' (Size = 4000), @p4='?' (Size = 256), @p5='?' (DbType = Boolean), @p6='?' (Size = 50), @p7='?' (Size = 50), @p8='?' (Size = 450), @p9='?' (DbType = Boolean), @p10='?' (DbType = DateTimeOffset), @p11='?' (Size = 4000), @p12='?' (Size = 256), @p13='?' (Size = 256), @p14='?' (Size = 4000), @p15='?' (Size = 4000), @p16='?' (DbType = Boolean), @p17='?' (Size = 4000), @p18='?' (DbType = Int32), @p19='?' (Size = 4000), @p20='?' (DbType = Int32), @p21='?' (DbType = Boolean), @p22='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [Address], [ConcurrencyStamp], [Email], [EmailConfirmed], [FirstName], [LastName], [LeaderID], [LockoutEnabled], [LockoutEnd], [Major], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [PictureURL], [Role], [SecurityStamp], [Status], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21, @p22);
+2025-04-06 04:15:39.252 +02:00 [INF] Executed action secondVersionFlowSync.Controllers.AccountController.Register (secondVersionFlowSync) in 2003.1567ms
+2025-04-06 04:15:39.256 +02:00 [INF] Executed endpoint 'secondVersionFlowSync.Controllers.AccountController.Register (secondVersionFlowSync)'
+2025-04-06 04:15:39.260 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NotSupportedException: No IUserTwoFactorTokenProvider<TUser> named 'Default' is registered.
+   at Microsoft.AspNetCore.Identity.UserManager`1.GenerateUserTokenAsync(TUser user, String tokenProvider, String purpose)
+   at Microsoft.AspNetCore.Identity.UserManager`1.GenerateEmailConfirmationTokenAsync(TUser user)
+   at secondVersionFlowSync.Controllers.AccountController.GenerateEmailConfirmationLink(AppUser user) in C:\Users\hp\Desktop\asp1\secondVersionFlowSync\Controllers\AccountController.cs:line 152
+   at secondVersionFlowSync.Controllers.AccountController.Register(RegisterDto model) in C:\Users\hp\Desktop\asp1\secondVersionFlowSync\Controllers\AccountController.cs:line 82
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-04-06 04:15:39.345 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7142/api/Account/register - 500 null application/problem+json; charset=utf-8 2151.8481ms
+2025-04-06 04:18:01.051 +02:00 [INF] User profile is available. Using 'C:\Users\hp\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-06 04:18:01.392 +02:00 [INF] Now listening on: https://localhost:7142
+2025-04-06 04:18:01.395 +02:00 [INF] Now listening on: http://localhost:5249
+2025-04-06 04:18:01.401 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-06 04:18:01.405 +02:00 [INF] Hosting environment: Development
+2025-04-06 04:18:01.407 +02:00 [INF] Content root path: C:\Users\hp\Desktop\asp1\secondVersionFlowSync
+2025-04-06 04:18:02.060 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7142/swagger/index.html - null null
+2025-04-06 04:18:02.496 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7142/swagger/index.html - 200 null text/html;charset=utf-8 444.1086ms
+2025-04-06 04:18:02.497 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7142/_vs/browserLink - null null
+2025-04-06 04:18:02.497 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7142/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-06 04:18:02.523 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7142/_framework/aspnetcore-browser-refresh.js - 200 13778 application/javascript; charset=utf-8 25.6649ms
+2025-04-06 04:18:02.564 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7142/_vs/browserLink - 200 null text/javascript; charset=UTF-8 67.0651ms
+2025-04-06 04:18:02.710 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7142/swagger/v1/swagger.json - null null
+2025-04-06 04:18:02.976 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7142/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 266.5963ms
+2025-04-06 04:19:26.000 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7142/api/Account/register - application/json 179
+2025-04-06 04:19:26.028 +02:00 [INF] Executing endpoint 'secondVersionFlowSync.Controllers.AccountController.Register (secondVersionFlowSync)'
+2025-04-06 04:19:26.112 +02:00 [INF] Route matched with {action = "Register", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(secondVersionFlowSync.DTOs.Auth.RegisterDto) on controller secondVersionFlowSync.Controllers.AccountController (secondVersionFlowSync).
+2025-04-06 04:19:30.930 +02:00 [INF] Executed DbCommand (233ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LeaderID], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Major], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[PictureURL], [a].[Role], [a].[SecurityStamp], [a].[Status], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2025-04-06 04:19:31.398 +02:00 [INF] Executing BadRequestObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-06 04:19:31.429 +02:00 [INF] Executed action secondVersionFlowSync.Controllers.AccountController.Register (secondVersionFlowSync) in 5297.2483ms
+2025-04-06 04:19:31.438 +02:00 [INF] Executed endpoint 'secondVersionFlowSync.Controllers.AccountController.Register (secondVersionFlowSync)'
+2025-04-06 04:19:31.468 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7142/api/Account/register - 400 null application/json; charset=utf-8 5467.4922ms
+2025-04-06 04:21:42.674 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7142/api/Account/register - application/json 179
+2025-04-06 04:21:42.683 +02:00 [INF] Executing endpoint 'secondVersionFlowSync.Controllers.AccountController.Register (secondVersionFlowSync)'
+2025-04-06 04:21:42.735 +02:00 [INF] Route matched with {action = "Register", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(secondVersionFlowSync.DTOs.Auth.RegisterDto) on controller secondVersionFlowSync.Controllers.AccountController (secondVersionFlowSync).
+2025-04-06 04:21:42.963 +02:00 [INF] Executed DbCommand (71ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LeaderID], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Major], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[PictureURL], [a].[Role], [a].[SecurityStamp], [a].[Status], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2025-04-06 04:21:43.002 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LeaderID], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Major], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[PictureURL], [a].[Role], [a].[SecurityStamp], [a].[Status], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-04-06 04:21:43.028 +02:00 [INF] Executed action secondVersionFlowSync.Controllers.AccountController.Register (secondVersionFlowSync) in 288.1485ms
+2025-04-06 04:21:43.032 +02:00 [INF] Executed endpoint 'secondVersionFlowSync.Controllers.AccountController.Register (secondVersionFlowSync)'
+2025-04-06 04:21:43.039 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Exception: User registration failed: Passwords must have at least one non alphanumeric character., Passwords must have at least one lowercase ('a'-'z').
+   at secondVersionFlowSync.Controllers.AccountController.Register(RegisterDto model) in C:\Users\hp\Desktop\asp1\secondVersionFlowSync\Controllers\AccountController.cs:line 76
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-04-06 04:21:43.150 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7142/api/Account/register - 500 null application/problem+json; charset=utf-8 476.1454ms
+2025-04-06 04:22:13.015 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7142/api/Account/register - application/json 175
+2025-04-06 04:22:13.020 +02:00 [INF] Executing endpoint 'secondVersionFlowSync.Controllers.AccountController.Register (secondVersionFlowSync)'
+2025-04-06 04:22:13.023 +02:00 [INF] Route matched with {action = "Register", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(secondVersionFlowSync.DTOs.Auth.RegisterDto) on controller secondVersionFlowSync.Controllers.AccountController (secondVersionFlowSync).
+2025-04-06 04:22:13.086 +02:00 [INF] Executed DbCommand (7ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LeaderID], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Major], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[PictureURL], [a].[Role], [a].[SecurityStamp], [a].[Status], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2025-04-06 04:22:13.098 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LeaderID], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Major], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[PictureURL], [a].[Role], [a].[SecurityStamp], [a].[Status], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-04-06 04:22:13.447 +02:00 [INF] Executed DbCommand (8ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LeaderID], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Major], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[PictureURL], [a].[Role], [a].[SecurityStamp], [a].[Status], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-04-06 04:22:13.739 +02:00 [INF] Executed DbCommand (23ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 255), @p3='?' (Size = 4000), @p4='?' (Size = 256), @p5='?' (DbType = Boolean), @p6='?' (Size = 50), @p7='?' (Size = 50), @p8='?' (Size = 450), @p9='?' (DbType = Boolean), @p10='?' (DbType = DateTimeOffset), @p11='?' (Size = 4000), @p12='?' (Size = 256), @p13='?' (Size = 256), @p14='?' (Size = 4000), @p15='?' (Size = 4000), @p16='?' (DbType = Boolean), @p17='?' (Size = 4000), @p18='?' (DbType = Int32), @p19='?' (Size = 4000), @p20='?' (DbType = Int32), @p21='?' (DbType = Boolean), @p22='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [Address], [ConcurrencyStamp], [Email], [EmailConfirmed], [FirstName], [LastName], [LeaderID], [LockoutEnabled], [LockoutEnd], [Major], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [PictureURL], [Role], [SecurityStamp], [Status], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21, @p22);
+2025-04-06 04:22:20.427 +02:00 [INF] Executed action secondVersionFlowSync.Controllers.AccountController.Register (secondVersionFlowSync) in 7399.3683ms
+2025-04-06 04:22:20.432 +02:00 [INF] Executed endpoint 'secondVersionFlowSync.Controllers.AccountController.Register (secondVersionFlowSync)'
+2025-04-06 04:22:20.438 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+MailKit.Security.AuthenticationException: 535: 5.7.139 Authentication unsuccessful, basic authentication is disabled. [MI2P293CA0007.ITAP293.PROD.OUTLOOK.COM 2025-04-06T02:22:20.761Z 08DD7476A550CCD0]
+ ---> MailKit.Net.Smtp.SmtpCommandException: 5.7.139 Authentication unsuccessful, basic authentication is disabled. [MI2P293CA0007.ITAP293.PROD.OUTLOOK.COM 2025-04-06T02:22:20.761Z 08DD7476A550CCD0]
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.AuthenticateAsync(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at secondVersionFlowSync.services.EmailService.EmailService.sendEmailAsync(EmailDto request) in C:\Users\hp\Desktop\asp1\secondVersionFlowSync\services\EmailService\EmailService.cs:line 28
+   at secondVersionFlowSync.Controllers.AccountController.Register(RegisterDto model) in C:\Users\hp\Desktop\asp1\secondVersionFlowSync\Controllers\AccountController.cs:line 88
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-04-06 04:22:20.522 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7142/api/Account/register - 500 null application/problem+json; charset=utf-8 7507.3723ms
+2025-04-06 04:43:30.231 +02:00 [INF] User profile is available. Using 'C:\Users\hp\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-06 04:43:30.529 +02:00 [INF] Now listening on: https://localhost:7142
+2025-04-06 04:43:30.533 +02:00 [INF] Now listening on: http://localhost:5249
+2025-04-06 04:43:30.541 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-06 04:43:30.546 +02:00 [INF] Hosting environment: Development
+2025-04-06 04:43:30.548 +02:00 [INF] Content root path: C:\Users\hp\Desktop\asp1\secondVersionFlowSync
+2025-04-06 04:43:31.280 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7142/swagger/index.html - null null
+2025-04-06 04:43:31.698 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7142/swagger/index.html - 200 null text/html;charset=utf-8 427.1053ms
+2025-04-06 04:43:31.707 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7142/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-06 04:43:31.707 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7142/_vs/browserLink - null null
+2025-04-06 04:43:31.737 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7142/_framework/aspnetcore-browser-refresh.js - 200 13778 application/javascript; charset=utf-8 29.6997ms
+2025-04-06 04:43:31.792 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7142/_vs/browserLink - 200 null text/javascript; charset=UTF-8 85.0371ms
+2025-04-06 04:43:31.926 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7142/swagger/v1/swagger.json - null null
+2025-04-06 04:43:32.200 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7142/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 273.8128ms
+2025-04-06 04:44:25.736 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7142/api/Account/register - application/json 173
+2025-04-06 04:44:25.756 +02:00 [INF] Executing endpoint 'secondVersionFlowSync.Controllers.AccountController.Register (secondVersionFlowSync)'
+2025-04-06 04:44:25.806 +02:00 [INF] Route matched with {action = "Register", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(secondVersionFlowSync.DTOs.Auth.RegisterDto) on controller secondVersionFlowSync.Controllers.AccountController (secondVersionFlowSync).
+2025-04-06 04:44:28.828 +02:00 [INF] Executed DbCommand (133ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LeaderID], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Major], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[PictureURL], [a].[Role], [a].[SecurityStamp], [a].[Status], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2025-04-06 04:44:29.124 +02:00 [INF] Executing BadRequestObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-06 04:44:29.140 +02:00 [INF] Executed action secondVersionFlowSync.Controllers.AccountController.Register (secondVersionFlowSync) in 3325.3192ms
+2025-04-06 04:44:29.143 +02:00 [INF] Executed endpoint 'secondVersionFlowSync.Controllers.AccountController.Register (secondVersionFlowSync)'
+2025-04-06 04:44:29.157 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7142/api/Account/register - 400 null application/json; charset=utf-8 3420.9915ms
+2025-04-06 04:45:32.702 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7142/api/Account/register - application/json 173
+2025-04-06 04:45:32.715 +02:00 [INF] Executing endpoint 'secondVersionFlowSync.Controllers.AccountController.Register (secondVersionFlowSync)'
+2025-04-06 04:45:32.720 +02:00 [INF] Route matched with {action = "Register", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(secondVersionFlowSync.DTOs.Auth.RegisterDto) on controller secondVersionFlowSync.Controllers.AccountController (secondVersionFlowSync).
+2025-04-06 04:45:32.890 +02:00 [INF] Executed DbCommand (11ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LeaderID], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Major], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[PictureURL], [a].[Role], [a].[SecurityStamp], [a].[Status], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2025-04-06 04:45:32.921 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LeaderID], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Major], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[PictureURL], [a].[Role], [a].[SecurityStamp], [a].[Status], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-04-06 04:45:33.159 +02:00 [INF] Executed DbCommand (8ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LeaderID], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Major], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[PictureURL], [a].[Role], [a].[SecurityStamp], [a].[Status], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-04-06 04:45:33.447 +02:00 [INF] Executed DbCommand (48ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 255), @p3='?' (Size = 4000), @p4='?' (Size = 256), @p5='?' (DbType = Boolean), @p6='?' (Size = 50), @p7='?' (Size = 50), @p8='?' (Size = 450), @p9='?' (DbType = Boolean), @p10='?' (DbType = DateTimeOffset), @p11='?' (Size = 4000), @p12='?' (Size = 256), @p13='?' (Size = 256), @p14='?' (Size = 4000), @p15='?' (Size = 4000), @p16='?' (DbType = Boolean), @p17='?' (Size = 4000), @p18='?' (DbType = Int32), @p19='?' (Size = 4000), @p20='?' (DbType = Int32), @p21='?' (DbType = Boolean), @p22='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [Address], [ConcurrencyStamp], [Email], [EmailConfirmed], [FirstName], [LastName], [LeaderID], [LockoutEnabled], [LockoutEnd], [Major], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [PictureURL], [Role], [SecurityStamp], [Status], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21, @p22);
+2025-04-06 04:45:39.948 +02:00 [INF] Executed action secondVersionFlowSync.Controllers.AccountController.Register (secondVersionFlowSync) in 7215.7716ms
+2025-04-06 04:45:39.955 +02:00 [INF] Executed endpoint 'secondVersionFlowSync.Controllers.AccountController.Register (secondVersionFlowSync)'
+2025-04-06 04:45:39.977 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+MailKit.Security.AuthenticationException: 535: 5.7.139 Authentication unsuccessful, basic authentication is disabled. [MI1P293CA0023.ITAP293.PROD.OUTLOOK.COM 2025-04-06T02:45:40.339Z 08DD708542620DEC]
+ ---> MailKit.Net.Smtp.SmtpCommandException: 5.7.139 Authentication unsuccessful, basic authentication is disabled. [MI1P293CA0023.ITAP293.PROD.OUTLOOK.COM 2025-04-06T02:45:40.339Z 08DD708542620DEC]
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.AuthenticateAsync(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at secondVersionFlowSync.services.EmailService.EmailService.sendEmailAsync(EmailDto request) in C:\Users\hp\Desktop\asp1\secondVersionFlowSync\services\EmailService\EmailService.cs:line 28
+   at secondVersionFlowSync.Controllers.AccountController.Register(RegisterDto model) in C:\Users\hp\Desktop\asp1\secondVersionFlowSync\Controllers\AccountController.cs:line 88
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-04-06 04:45:40.166 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7142/api/Account/register - 500 null application/problem+json; charset=utf-8 7463.968ms
+2025-04-06 05:07:09.865 +02:00 [INF] User profile is available. Using 'C:\Users\hp\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-06 05:07:10.137 +02:00 [INF] Now listening on: https://localhost:7142
+2025-04-06 05:07:10.139 +02:00 [INF] Now listening on: http://localhost:5249
+2025-04-06 05:07:10.144 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-06 05:07:10.147 +02:00 [INF] Hosting environment: Development
+2025-04-06 05:07:10.150 +02:00 [INF] Content root path: C:\Users\hp\Desktop\asp1\secondVersionFlowSync
+2025-04-06 05:07:11.061 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7142/swagger/index.html - null null
+2025-04-06 05:07:11.695 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7142/swagger/index.html - 200 null text/html;charset=utf-8 634.2716ms
+2025-04-06 05:07:11.701 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7142/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-06 05:07:11.703 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7142/_vs/browserLink - null null
+2025-04-06 05:07:11.751 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7142/_framework/aspnetcore-browser-refresh.js - 200 13778 application/javascript; charset=utf-8 49.419ms
+2025-04-06 05:07:11.828 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7142/_vs/browserLink - 200 null text/javascript; charset=UTF-8 124.7171ms
+2025-04-06 05:07:11.927 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7142/swagger/v1/swagger.json - null null
+2025-04-06 05:07:12.170 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7142/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 242.9436ms
+2025-04-06 05:09:01.272 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7142/api/Account/register - application/json 173
+2025-04-06 05:09:01.298 +02:00 [INF] Executing endpoint 'secondVersionFlowSync.Controllers.AccountController.Register (secondVersionFlowSync)'
+2025-04-06 05:09:01.351 +02:00 [INF] Route matched with {action = "Register", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(secondVersionFlowSync.DTOs.Auth.RegisterDto) on controller secondVersionFlowSync.Controllers.AccountController (secondVersionFlowSync).
+2025-04-06 05:09:03.925 +02:00 [INF] Executed DbCommand (72ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LeaderID], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Major], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[PictureURL], [a].[Role], [a].[SecurityStamp], [a].[Status], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2025-04-06 05:09:04.025 +02:00 [INF] Executed DbCommand (12ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LeaderID], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Major], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[PictureURL], [a].[Role], [a].[SecurityStamp], [a].[Status], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-04-06 05:09:04.392 +02:00 [INF] Executed DbCommand (8ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LeaderID], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Major], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[PictureURL], [a].[Role], [a].[SecurityStamp], [a].[Status], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-04-06 05:09:04.958 +02:00 [INF] Executed DbCommand (28ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 255), @p3='?' (Size = 4000), @p4='?' (Size = 256), @p5='?' (DbType = Boolean), @p6='?' (Size = 50), @p7='?' (Size = 50), @p8='?' (Size = 450), @p9='?' (DbType = Boolean), @p10='?' (DbType = DateTimeOffset), @p11='?' (Size = 4000), @p12='?' (Size = 256), @p13='?' (Size = 256), @p14='?' (Size = 4000), @p15='?' (Size = 4000), @p16='?' (DbType = Boolean), @p17='?' (Size = 4000), @p18='?' (DbType = Int32), @p19='?' (Size = 4000), @p20='?' (DbType = Int32), @p21='?' (DbType = Boolean), @p22='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [Address], [ConcurrencyStamp], [Email], [EmailConfirmed], [FirstName], [LastName], [LeaderID], [LockoutEnabled], [LockoutEnd], [Major], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [PictureURL], [Role], [SecurityStamp], [Status], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21, @p22);
+2025-04-06 05:09:11.799 +02:00 [INF] Executed action secondVersionFlowSync.Controllers.AccountController.Register (secondVersionFlowSync) in 10437.8686ms
+2025-04-06 05:09:11.803 +02:00 [INF] Executed endpoint 'secondVersionFlowSync.Controllers.AccountController.Register (secondVersionFlowSync)'
+2025-04-06 05:09:11.809 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+MailKit.Security.AuthenticationException: 535: 5.7.139 Authentication unsuccessful, basic authentication is disabled. [MI2P293CA0003.ITAP293.PROD.OUTLOOK.COM 2025-04-06T03:09:12.116Z 08DD74940A0F36EA]
+ ---> MailKit.Net.Smtp.SmtpCommandException: 5.7.139 Authentication unsuccessful, basic authentication is disabled. [MI2P293CA0003.ITAP293.PROD.OUTLOOK.COM 2025-04-06T03:09:12.116Z 08DD74940A0F36EA]
+   --- End of inner exception stack trace ---
+   at MailKit.Net.Smtp.SmtpClient.AuthenticateAsync(Encoding encoding, ICredentials credentials, CancellationToken cancellationToken)
+   at secondVersionFlowSync.services.EmailService.EmailService.sendEmailAsync(EmailDto request) in C:\Users\hp\Desktop\asp1\secondVersionFlowSync\services\EmailService\EmailService.cs:line 28
+   at secondVersionFlowSync.Controllers.AccountController.Register(RegisterDto model) in C:\Users\hp\Desktop\asp1\secondVersionFlowSync\Controllers\AccountController.cs:line 88
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-04-06 05:09:11.915 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7142/api/Account/register - 500 null application/problem+json; charset=utf-8 10643.7745ms

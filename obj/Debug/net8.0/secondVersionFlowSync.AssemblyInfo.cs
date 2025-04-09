@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("secondVersionFlowSync")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+663b59fc120365840a67ddfedbfcdd2063a3d7fe")]
 [assembly: System.Reflection.AssemblyProductAttribute("secondVersionFlowSync")]
 [assembly: System.Reflection.AssemblyTitleAttribute("secondVersionFlowSync")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

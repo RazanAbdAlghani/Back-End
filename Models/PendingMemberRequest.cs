@@ -6,8 +6,6 @@
 
         //علاقة مع العضو(Member)
         public string MemberId { get; set; }
-
-        public string TempMember { get; set; } // JSON بيانات المستخدم المؤقت
         public AppUser Member { get; set; }
 
         //علاقة مع القائد(Leader)

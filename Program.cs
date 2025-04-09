@@ -1,4 +1,4 @@
-
+﻿
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.EntityFrameworkCore;
@@ -8,6 +8,12 @@ using secondVersionFlowSync.Models;
 using secondVersionFlowSync.services;
 using Serilog;
 using secondVersionFlowSync.services.EmailService;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+using Microsoft.Extensions.Configuration;
+using System.Security.Claims;
+using Task = System.Threading.Tasks.Task;
 
 namespace secondVersionFlowSync
 {
@@ -75,14 +81,43 @@ namespace secondVersionFlowSync
             //    options.SignIn.RequireConfirmedEmail = true;
             //});
 
-            // Outloock
+            // Email Service (outlook)
             builder.Services.AddScoped<IEmailService, EmailService>();
+
+
+            //Add Auth Service (generate token)
+            builder.Services.AddScoped<AuthServices>();
 
             // Serilog
             builder.Host.UseSerilog((context, config) =>
             {
                 config.ReadFrom.Configuration(context.Configuration);
             });
+
+            
+            builder.Services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = "Bearer";
+                options.DefaultChallengeScheme = "Bearer";
+                })
+    .AddJwtBearer(options =>
+    {
+        options.TokenValidationParameters = new TokenValidationParameters()
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+            ValidIssuer = builder.Configuration.GetSection("jwt")["ValidIssuer"],
+            ValidAudience = builder.Configuration.GetSection("jwt")["ValidAudience"],
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration.GetSection("jwt")["secretKey"])),
+
+            // ✅ هذا مهم جدًا للسماح باستخدام [Authorize(Roles = "...")]
+            RoleClaimType = ClaimTypes.Role
+        };
+    });
+
+            builder.Services.AddAuthorization();
 
 
 
@@ -95,8 +130,27 @@ namespace secondVersionFlowSync
                 app.UseSwaggerUI();
             }
 
+            // ✅ إضافة هذا البلوك لإنشاء الأدوار عند بداية التشغيل
+            using (var scope = app.Services.CreateScope())
+            {
+                var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+
+                Task.Run(async () =>
+                {
+                    string[] roles = { "Leader", "Member" };
+                    foreach (var role in roles)
+                    {
+                        if (!await roleManager.RoleExistsAsync(role))
+                        {
+                            await roleManager.CreateAsync(new IdentityRole(role));
+                        }
+                    }
+                }).GetAwaiter().GetResult();
+            }
+
             app.UseHttpsRedirection();
 
+            app.UseAuthentication();  // لازم قبل UseAuthorization
             app.UseAuthorization();
 
 

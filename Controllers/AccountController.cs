@@ -1,5 +1,6 @@
 ﻿using MailKit.Net.Smtp;
 using MailKit.Security;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Identity;
@@ -12,6 +13,7 @@ using secondVersionFlowSync.Data;
 using secondVersionFlowSync.DTOs;
 using secondVersionFlowSync.DTOs.Auth;
 using secondVersionFlowSync.Models;
+using secondVersionFlowSync.services;
 using secondVersionFlowSync.services.EmailService;
 using System;
 using System.Web;
@@ -25,21 +27,25 @@ namespace secondVersionFlowSync.Controllers
     public class AccountController : ControllerBase
     {
         private readonly UserManager<AppUser> userManager;
+        private readonly SignInManager<AppUser> signInManager;
         private readonly IEmailService emailService;
         private readonly ApplicationDbContext context;
+        private readonly AuthServices authServices;
 
-        public AccountController(UserManager<AppUser> userManager, IEmailService emailService, ApplicationDbContext context)
+        public AccountController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, IEmailService emailService, ApplicationDbContext context, AuthServices authServices)
         {
             this.userManager = userManager;
+            this.signInManager = signInManager;
             this.emailService = emailService;
             this.context = context;
+            this.authServices = authServices;
         }
 
-        [HttpPost("register")]
 
+        [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] RegisterDto model)
         {
-            // تحقق مما إذا كان اسم المستخدم موجودًا مسبقًا
+            // تحقق مما إذا كان ايميل المستخدم موجودًا مسبقًا
             var existingUserByEmail = await userManager.FindByEmailAsync(model.Email);
             if (existingUserByEmail != null)
             {
@@ -54,69 +60,98 @@ namespace secondVersionFlowSync.Controllers
                 throw new Exception("Username is already taken.");
             }
 
-            // تحقق من وجود قائد فريق (TeamLeader) في النظام
-            if (model.Role == Role.Member && !userManager.Users.Any(u => u.Role == Role.Leader))
-            {
-                throw new Exception("لا يمكن للميمبر التسجيل بدون وجود ليدر.");
-            }
-
-            var user = new AppUser()
+            // إنشاء مستخدم مؤقت (لم يخزن بعد)
+            var user = new AppUser
             {
                 FirstName = model.FirstName,
                 LastName = model.LastName,
                 Email = model.Email,
                 Role = model.Role,
                 UserName = model.Email,
+                EmailConfirmed = false
             };
+
 
             // تحقق من وجود قائد فريق (TeamLeader) في النظام
             if (model.Role == Role.Member && !userManager.Users.Any(u => u.Role == Role.Leader))
             {
-                throw new Exception("لا يمكن للميمبر التسجيل بدون وجود ليدر.");
+                throw new Exception("A member cannot register without a leader.");
             }
 
-
+            // تحقق من وجود قائد فريق (TeamLeader) في النظام قبل إنشاء الحساب
+            if (model.Role == Role.Leader)
+            {
+                var existingLeader = await userManager.Users.FirstOrDefaultAsync(u => u.Role == Role.Leader);
+                if (existingLeader != null)
+                {
+                    throw new Exception("There is really only one team leader.");
+                }
+            }
+            // Add user to DB
             var result = await userManager.CreateAsync(user, model.Password);
 
             if (!result.Succeeded)
+                throw new Exception(string.Join(", ", result.Errors.Select(e => e.Description)));
+            try
             {
-                throw new Exception("User registration failed: " + string.Join(", ", result.Errors.Select(e => e.Description)));
+                await userManager.AddToRoleAsync(user, model.Role.ToString());
+                var token = await userManager.GenerateEmailConfirmationTokenAsync(user);
 
-            }
-            // إذا كان الدور TeamLeader، نرسل له بريد التأكيد
-            if (user.Role == Role.Leader)
-            {
-                var emailDto = new EmailDto
+                var confirmationLink = Url.Action("ConfirmEmail", "Account", new
                 {
-                    To = user.Email,
-                    Subject = "تحقق من حسابك كـ Team Leader",
-                    Body = $"مرحباً، تم تسجيلك كـ Team Leader. يرجى التحقق من بريدك الإلكتروني باستخدام الرابط التالي: {GenerateEmailConfirmationLink(user)}",
-                };
-                await emailService.sendEmailAsync(emailDto);
-            }
-            else if (user.Role == Role.Member)
-            {
-                // إرسال طلب إلى القائد للموافقة على العضو
-                var leader = userManager.Users.FirstOrDefault(u => u.Role == Role.Leader);
-                if (leader != null)
+                    userId = user.Id,
+                    token = token
+                }, Request.Scheme);
+
+                if (model.Role == Role.Leader)
                 {
-                    var pendingRequest = new PendingMemberRequest
+                    await SendConfirmationEmail(user.Email, "تأكيد حسابك كـ Leader", confirmationLink);
+                }
+
+                // تحقق من وجود قائد فريق (TeamLeader) في النظام
+                if (model.Role == Role.Member && !userManager.Users.Any(u => u.Role == Role.Leader))
+                {
+                    throw new Exception("A member cannot register without a leader.");
+                }
+
+                else if (model.Role == Role.Member)
+                {
+                    var leader = userManager.Users.FirstOrDefault(u => u.Role == Role.Leader);
+
+                    if (leader is null)
+                    {
+                        throw new Exception("There is no Leader currently.");
+                    }
+
+
+                    var pendingRequest = new PendingMemberRequest()
                     {
                         MemberId = user.Id,
                         LeaderId = leader.Id
                     };
-                    await context.PendingMemberRequests.AddAsync(pendingRequest);
+
+                    context.PendingMemberRequests.AddAsync(pendingRequest);
                     await context.SaveChangesAsync();
                 }
+
+
+                return Ok(new { message = "success" });
             }
 
-            return Ok(new { message = "success" });
+            catch (Exception ex)
+            {
+                // 🔥 حذف المستخدم مباشرة عند حدوث خطأ بعد الحفظ
+                await userManager.DeleteAsync(user);
 
+                // رجع رسالة الخطأ
+                return StatusCode(500, $"حدث خطأ أثناء إنشاء الحساب: {ex.Message}");
+            }
 
         }
 
         // موافقة القائد على العضو
         [HttpPost("approve-member/{requestId}")]
+        [Authorize(Roles = "Leader")]
         public async Task<IActionResult> ApproveMember(int requestId)
         {
             var pendingRequest = await context.PendingMemberRequests
@@ -126,11 +161,17 @@ namespace secondVersionFlowSync.Controllers
                 throw new Exception("طلب العضوية غير موجود.");
             }
 
-            // التأكد من أن القائد هو من يوافق
-            var currentUser = await userManager.GetUserAsync(User);  // المستخدم الحالي (القائد)
-            if (pendingRequest.LeaderId != currentUser.Id)
+            var currentUser = await userManager.GetUserAsync(User);
+            Console.WriteLine($"Current user: {currentUser?.UserName}");  // لازم يظهر اسم
+            if (currentUser == null)
             {
-                throw new Exception("أنت لست القائد المعني.");
+                //return Unauthorized("لم يتم التحقق من هوية المستخدم.");
+                throw new Exception("لم يتم التحقق من هوية المستخدم.");
+            }
+
+            if (pendingRequest.LeaderId == null)
+            {
+                return BadRequest("الطلب لا يحتوي على معرف القائد.");
             }
 
             // الموافقة على الطلب
@@ -141,23 +182,55 @@ namespace secondVersionFlowSync.Controllers
             var member = await userManager.FindByIdAsync(pendingRequest.MemberId);
             if (member != null)
             {
-                var emailDto = new EmailDto
-                {
-                    To = member.Email,
-                    Subject = "تمت الموافقة على طلبك كـ Team Member",
-                    Body = $"مرحباً، تم قبولك كـ Team Member. يرجى التحقق من بريدك الإلكتروني باستخدام الرابط التالي: {GenerateEmailConfirmationLink(member)}",
-                };
-                await emailService.sendEmailAsync(emailDto);
+                var confirmationToken = await userManager.GenerateEmailConfirmationTokenAsync(member);
+                var confirmationLink = Url.Action("ConfirmEmail", "Account", new { userId = member.Id, token = confirmationToken }, Request.Scheme);
+
+                await SendConfirmationEmail(member.Email, "تأكيد حسابك كـ Member", confirmationLink);
             }
 
-            return Ok("تمت الموافقة على العضو بنجاح.");
+            return Ok("Membership has been successfully approved, please check your email.");
         }
+
+
+        [HttpPost("reject-member/{requestId}")]
+        [Authorize(Roles = "Leader")]
+        public async Task<IActionResult> RejectMember(int requestId)
+        {
+            var pendingRequest = await context.PendingMemberRequests
+                .FirstOrDefaultAsync(r => r.Id == requestId);
+
+            if (pendingRequest == null)
+            {
+                return NotFound("طلب العضوية غير موجود.");
+            }
+
+            // التأكد من أن القائد هو من يرفض
+            var currentUser = await userManager.GetUserAsync(User);
+            if (pendingRequest.LeaderId != currentUser.Id)
+            {
+                return Unauthorized("أنت لست القائد المعني.");
+            }
+
+            var member = await userManager.FindByIdAsync(pendingRequest.MemberId);
+            //حذف الطلب 
+            context.PendingMemberRequests.Remove(pendingRequest);
+            await context.SaveChangesAsync(); // نحفظ هنا قبل حذف العضو
+            // حذف المستخدم من النظام
+            if (member != null)
+            {
+                await userManager.DeleteAsync(member);
+                await context.SaveChangesAsync();
+            }
+
+            return Ok("تم رفض الطلب وحذف العضو من النظام.");
+        }
+
 
         // إنشاء رابط تأكيد البريد الإلكتروني
         private string GenerateEmailConfirmationLink(AppUser user)
         {
             var token = userManager.GenerateEmailConfirmationTokenAsync(user).Result;
-            var confirmationLink = Url.Action("ConfirmEmail", "User", new { userId = user.Id, token = token }, Request.Scheme);
+            var confirmationLink = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, token = token }, Request.Scheme);
             return confirmationLink;
         }
 
@@ -176,15 +249,86 @@ namespace secondVersionFlowSync.Controllers
             }
 
             var result = await userManager.ConfirmEmailAsync(user, token);
-            if (result.Succeeded)
+            if (!result.Succeeded)
             {
-                return Ok("تم تأكيد البريد الإلكتروني بنجاح.");
+                throw new Exception("فشل تأكيد البريد الإلكتروني.");
             }
 
-            throw new Exception("فشل تأكيد البريد الإلكتروني.");
+            return Ok("تم تأكيد البريد الإلكتروني بنجاح.");
+        }
+
+
+
+        private async Task SendConfirmationEmail(string to, string subject, string link)
+        {
+            var emailDto = new EmailDto
+            {
+                To = to,
+                Subject = subject,
+                Body = $"يرجى تأكيد بريدك عبر الرابط التالي: {link}"
+            };
+            await emailService.sendEmailAsync(emailDto);
+        }
+
+        [HttpPost("Login")]
+        public async Task<IActionResult> Login([FromBody] LoginDto model)
+        {
+            var user = await userManager.FindByEmailAsync(model.Email);
+            if (user is null) return Unauthorized("Email not registered.");
+
+
+            //Check Password
+            if (model.Password is null) return Unauthorized();
+
+            var result = await signInManager.CheckPasswordSignInAsync(user, model.Password, false);
+
+            if (!result.Succeeded) return Unauthorized("Invalid data");
+
+            // Check isEmailConfirmation
+            if (!await userManager.IsEmailConfirmedAsync(user))
+            {
+                return Unauthorized("Please confirm your email before logging in.");
+            }
+            var token = await authServices.CreateTokenAsync(user, userManager);
+            return Ok(new
+            {
+                Message = "successfully logged in!!",
+
+                User = new UserDto()
+                {
+                    DisplayName = user.FirstName + "" + user.LastName,
+                    Email = user.Email
+                },
+                token = token
+            });
+
+        }
+
+        [HttpPost("change-password")]
+        [Authorize]
+        public async Task<IActionResult> ChangePassword([FromBody] ChangePassDto model)
+        {
+            if (model.NewPassword != model.ConfirmPassword)
+            {
+                throw new Exception("The new password and confirmation  not the same!");
+            }
+
+            // نحصل على المستخدم الحالي من التوكن
+            var user = await userManager.GetUserAsync(User);
+            if (user == null)
+            {
+                return Unauthorized("User not found.");
+            }
+
+            var result = await userManager.ChangePasswordAsync(user, model.CurrentPassword, model.NewPassword);
+            if (!result.Succeeded)
+            {
+                throw new Exception(string.Join(", ", result.Errors.Select(e => e.Description)));
+            }
+
+            return Ok("Your password has been changed successfully.");
         }
     }
-
 
 }
 

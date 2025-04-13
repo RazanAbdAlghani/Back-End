@@ -1,28 +1,19 @@
-﻿using MailKit.Net.Smtp;
-using MailKit.Security;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Http.HttpResults;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using MimeKit;
-using MimeKit.Text;
 using secondVersionFlowSync.Data;
 using secondVersionFlowSync.DTOs;
 using secondVersionFlowSync.DTOs.Auth;
 using secondVersionFlowSync.Models;
 using secondVersionFlowSync.services;
 using secondVersionFlowSync.services.EmailService;
-using System;
-using System.Web;
 using Task = System.Threading.Tasks.Task;
 
 namespace secondVersionFlowSync.Controllers
 {
 
-    [Route("api/[controller]")]
+    //[Route("api/[controller]")]
     [ApiController]
     public class AccountController : ControllerBase
     {
@@ -328,6 +319,60 @@ namespace secondVersionFlowSync.Controllers
 
             return Ok("Your password has been changed successfully.");
         }
+
+        [HttpPost("forgot-password")]
+        public async Task<IActionResult> ForgotPassword([FromBody] ForgotPasswordDto model)
+        {
+            if (string.IsNullOrWhiteSpace(model.Email))
+                return BadRequest("Email is required.");
+
+            var user = await userManager.FindByEmailAsync(model.Email);
+            if (user == null || !(await userManager.IsEmailConfirmedAsync(user)))
+            {
+                // لا تكشف أن المستخدم غير موجود أو لم يؤكد بريده لأسباب أمنية
+                return Ok("If an account with that email exists, a reset link has been sent.");
+            }
+
+            // إنشاء رمز إعادة تعيين كلمة المرور
+            var token = await userManager.GeneratePasswordResetTokenAsync(user);
+
+            // إنشاء رابط إعادة تعيين كلمة المرور
+            var resetLink = Url.Action("ResetPassword", "Account", new
+            {
+                userId = user.Id,
+                token = token
+            }, Request.Scheme);
+
+            // إرسال الإيميل
+            var emailDto = new EmailDto
+            {
+                To = user.Email,
+                Subject = "Reset your password",
+                Body = $"Click the link to reset your password: <a href=\"{resetLink}\">{resetLink}</a>"
+            };
+
+            await emailService.sendEmailAsync(emailDto);
+
+            return Ok("If an account with that email exists, a reset link has been sent.");
+        }
+
+        [HttpPost("reset-password")]
+        public async Task<IActionResult> ResetPassword([FromBody] ResetPasswordDto model)
+        {
+            var user = await userManager.FindByIdAsync(model.UserId);
+            if (user == null)
+                return BadRequest("Invalid user.");
+
+            var result = await userManager.ResetPasswordAsync(user, model.Token, model.NewPassword);
+
+            if (!result.Succeeded)
+            {
+                return BadRequest(result.Errors.Select(e => e.Description));
+            }
+
+            return Ok("Password has been reset successfully.");
+        }
+
     }
 
 }

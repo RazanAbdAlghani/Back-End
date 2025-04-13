@@ -1977,3 +1977,477 @@ WHERE [Id] = @p2 AND [ConcurrencyStamp] = @p3;
 2025-04-09 17:38:09.509 +02:00 [INF] Executed action secondVersionFlowSync.Controllers.AccountController.Register (secondVersionFlowSync) in 7022.3491ms
 2025-04-09 17:38:09.516 +02:00 [INF] Executed endpoint 'secondVersionFlowSync.Controllers.AccountController.Register (secondVersionFlowSync)'
 2025-04-09 17:38:09.522 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7142/api/Account/register - 500 null text/plain; charset=utf-8 7056.12ms
+2025-04-09 22:20:20.919 +02:00 [INF] Executed DbCommand (97ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-04-09 22:20:21.229 +02:00 [INF] Executed DbCommand (9ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-04-09 22:20:21.594 +02:00 [INF] User profile is available. Using 'C:\Users\hp\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-09 22:20:22.316 +02:00 [INF] Now listening on: https://localhost:7142
+2025-04-09 22:20:22.320 +02:00 [INF] Now listening on: http://localhost:5249
+2025-04-09 22:20:22.328 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-09 22:20:22.332 +02:00 [INF] Hosting environment: Development
+2025-04-09 22:20:22.335 +02:00 [INF] Content root path: C:\Users\hp\Desktop\asp1\secondVersionFlowSync
+2025-04-09 22:20:23.679 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7142/swagger/index.html - null null
+2025-04-09 22:20:24.223 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7142/swagger/index.html - 200 null text/html;charset=utf-8 546.5708ms
+2025-04-09 22:20:24.234 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7142/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-09 22:20:24.244 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7142/_vs/browserLink - null null
+2025-04-09 22:20:24.278 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7142/_framework/aspnetcore-browser-refresh.js - 200 13778 application/javascript; charset=utf-8 43.2943ms
+2025-04-09 22:20:24.413 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7142/_vs/browserLink - 200 null text/javascript; charset=UTF-8 169.4463ms
+2025-04-09 22:20:24.520 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7142/swagger/v1/swagger.json - null null
+2025-04-09 22:20:24.813 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7142/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 293.3662ms
+2025-04-09 22:22:45.170 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7142/api/Account/register - application/json 170
+2025-04-09 22:22:45.319 +02:00 [INF] Executing endpoint 'secondVersionFlowSync.Controllers.AccountController.Register (secondVersionFlowSync)'
+2025-04-09 22:22:45.395 +02:00 [INF] Route matched with {action = "Register", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(secondVersionFlowSync.DTOs.Auth.RegisterDto) on controller secondVersionFlowSync.Controllers.AccountController (secondVersionFlowSync).
+2025-04-09 22:22:45.548 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-04-09 22:22:45.617 +02:00 [INF] Executed action secondVersionFlowSync.Controllers.AccountController.Register (secondVersionFlowSync) in 198.5027ms
+2025-04-09 22:22:45.623 +02:00 [INF] Executed endpoint 'secondVersionFlowSync.Controllers.AccountController.Register (secondVersionFlowSync)'
+2025-04-09 22:22:45.628 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7142/api/Account/register - 400 null application/problem+json; charset=utf-8 458.3943ms
+2025-04-09 22:22:56.169 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7142/api/Account/register - application/json 169
+2025-04-09 22:22:56.208 +02:00 [INF] Executing endpoint 'secondVersionFlowSync.Controllers.AccountController.Register (secondVersionFlowSync)'
+2025-04-09 22:22:56.217 +02:00 [INF] Route matched with {action = "Register", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(secondVersionFlowSync.DTOs.Auth.RegisterDto) on controller secondVersionFlowSync.Controllers.AccountController (secondVersionFlowSync).
+2025-04-09 22:22:56.544 +02:00 [INF] Executed DbCommand (41ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LeaderID], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Major], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[PictureURL], [a].[Role], [a].[SecurityStamp], [a].[Status], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2025-04-09 22:22:56.590 +02:00 [INF] Executed DbCommand (7ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LeaderID], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Major], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[PictureURL], [a].[Role], [a].[SecurityStamp], [a].[Status], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-04-09 22:22:56.633 +02:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LeaderID], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Major], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[PictureURL], [a].[Role], [a].[SecurityStamp], [a].[Status], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Role] = 0
+2025-04-09 22:22:56.923 +02:00 [INF] Executed DbCommand (19ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LeaderID], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Major], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[PictureURL], [a].[Role], [a].[SecurityStamp], [a].[Status], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-04-09 22:22:57.461 +02:00 [INF] Executed DbCommand (15ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 255), @p3='?' (Size = 4000), @p4='?' (Size = 256), @p5='?' (DbType = Boolean), @p6='?' (Size = 50), @p7='?' (Size = 50), @p8='?' (Size = 450), @p9='?' (DbType = Boolean), @p10='?' (DbType = DateTimeOffset), @p11='?' (Size = 4000), @p12='?' (Size = 256), @p13='?' (Size = 256), @p14='?' (Size = 4000), @p15='?' (Size = 4000), @p16='?' (DbType = Boolean), @p17='?' (Size = 4000), @p18='?' (DbType = Int32), @p19='?' (Size = 4000), @p20='?' (DbType = Int32), @p21='?' (DbType = Boolean), @p22='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [Address], [ConcurrencyStamp], [Email], [EmailConfirmed], [FirstName], [LastName], [LeaderID], [LockoutEnabled], [LockoutEnd], [Major], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [PictureURL], [Role], [SecurityStamp], [Status], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21, @p22);
+2025-04-09 22:22:57.507 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2025-04-09 22:22:57.638 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE [a].[UserId] = @__p_0 AND [a].[RoleId] = @__p_1
+2025-04-09 22:22:57.665 +02:00 [INF] Executed DbCommand (8ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2025-04-09 22:22:57.704 +02:00 [INF] Executed DbCommand (8ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LeaderID], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Major], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[PictureURL], [a].[Role], [a].[SecurityStamp], [a].[Status], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-04-09 22:22:57.833 +02:00 [INF] Executed DbCommand (39ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450), @p24='?' (Size = 450), @p2='?' (DbType = Int32), @p3='?' (Size = 255), @p4='?' (Size = 4000), @p25='?' (Size = 4000), @p5='?' (Size = 256), @p6='?' (DbType = Boolean), @p7='?' (Size = 50), @p8='?' (Size = 50), @p9='?' (Size = 450), @p10='?' (DbType = Boolean), @p11='?' (DbType = DateTimeOffset), @p12='?' (Size = 4000), @p13='?' (Size = 256), @p14='?' (Size = 256), @p15='?' (Size = 4000), @p16='?' (Size = 4000), @p17='?' (DbType = Boolean), @p18='?' (Size = 4000), @p19='?' (DbType = Int32), @p20='?' (Size = 4000), @p21='?' (DbType = Int32), @p22='?' (DbType = Boolean), @p23='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1);
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p2, [Address] = @p3, [ConcurrencyStamp] = @p4, [Email] = @p5, [EmailConfirmed] = @p6, [FirstName] = @p7, [LastName] = @p8, [LeaderID] = @p9, [LockoutEnabled] = @p10, [LockoutEnd] = @p11, [Major] = @p12, [NormalizedEmail] = @p13, [NormalizedUserName] = @p14, [PasswordHash] = @p15, [PhoneNumber] = @p16, [PhoneNumberConfirmed] = @p17, [PictureURL] = @p18, [Role] = @p19, [SecurityStamp] = @p20, [Status] = @p21, [TwoFactorEnabled] = @p22, [UserName] = @p23
+OUTPUT 1
+WHERE [Id] = @p24 AND [ConcurrencyStamp] = @p25;
+2025-04-09 22:23:07.283 +02:00 [INF] Executed DbCommand (55ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450), @p2='?' (Size = 450), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [AspNetUserRoles]
+OUTPUT 1
+WHERE [RoleId] = @p0 AND [UserId] = @p1;
+DELETE FROM [AspNetUsers]
+OUTPUT 1
+WHERE [Id] = @p2 AND [ConcurrencyStamp] = @p3;
+2025-04-09 22:23:07.318 +02:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2025-04-09 22:23:07.323 +02:00 [INF] Executed action secondVersionFlowSync.Controllers.AccountController.Register (secondVersionFlowSync) in 11083.6199ms
+2025-04-09 22:23:07.328 +02:00 [INF] Executed endpoint 'secondVersionFlowSync.Controllers.AccountController.Register (secondVersionFlowSync)'
+2025-04-09 22:23:07.342 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7142/api/Account/register - 500 null text/plain; charset=utf-8 11173.0897ms
+2025-04-09 22:25:48.302 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7142/api/Account/register - application/json 169
+2025-04-09 22:25:48.314 +02:00 [INF] Executing endpoint 'secondVersionFlowSync.Controllers.AccountController.Register (secondVersionFlowSync)'
+2025-04-09 22:25:48.317 +02:00 [INF] Route matched with {action = "Register", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(secondVersionFlowSync.DTOs.Auth.RegisterDto) on controller secondVersionFlowSync.Controllers.AccountController (secondVersionFlowSync).
+2025-04-09 22:25:48.528 +02:00 [INF] Executed DbCommand (14ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LeaderID], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Major], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[PictureURL], [a].[Role], [a].[SecurityStamp], [a].[Status], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2025-04-09 22:25:48.553 +02:00 [INF] Executed DbCommand (19ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LeaderID], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Major], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[PictureURL], [a].[Role], [a].[SecurityStamp], [a].[Status], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-04-09 22:25:48.568 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LeaderID], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Major], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[PictureURL], [a].[Role], [a].[SecurityStamp], [a].[Status], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Role] = 0
+2025-04-09 22:25:48.833 +02:00 [INF] Executed DbCommand (8ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LeaderID], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Major], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[PictureURL], [a].[Role], [a].[SecurityStamp], [a].[Status], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-04-09 22:25:48.855 +02:00 [INF] Executed DbCommand (11ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 255), @p3='?' (Size = 4000), @p4='?' (Size = 256), @p5='?' (DbType = Boolean), @p6='?' (Size = 50), @p7='?' (Size = 50), @p8='?' (Size = 450), @p9='?' (DbType = Boolean), @p10='?' (DbType = DateTimeOffset), @p11='?' (Size = 4000), @p12='?' (Size = 256), @p13='?' (Size = 256), @p14='?' (Size = 4000), @p15='?' (Size = 4000), @p16='?' (DbType = Boolean), @p17='?' (Size = 4000), @p18='?' (DbType = Int32), @p19='?' (Size = 4000), @p20='?' (DbType = Int32), @p21='?' (DbType = Boolean), @p22='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [Address], [ConcurrencyStamp], [Email], [EmailConfirmed], [FirstName], [LastName], [LeaderID], [LockoutEnabled], [LockoutEnd], [Major], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [PictureURL], [Role], [SecurityStamp], [Status], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21, @p22);
+2025-04-09 22:25:48.869 +02:00 [INF] Executed DbCommand (9ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2025-04-09 22:25:48.883 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE [a].[UserId] = @__p_0 AND [a].[RoleId] = @__p_1
+2025-04-09 22:25:48.889 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2025-04-09 22:25:48.900 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LeaderID], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Major], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[PictureURL], [a].[Role], [a].[SecurityStamp], [a].[Status], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-04-09 22:25:48.935 +02:00 [INF] Executed DbCommand (24ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450), @p24='?' (Size = 450), @p2='?' (DbType = Int32), @p3='?' (Size = 255), @p4='?' (Size = 4000), @p25='?' (Size = 4000), @p5='?' (Size = 256), @p6='?' (DbType = Boolean), @p7='?' (Size = 50), @p8='?' (Size = 50), @p9='?' (Size = 450), @p10='?' (DbType = Boolean), @p11='?' (DbType = DateTimeOffset), @p12='?' (Size = 4000), @p13='?' (Size = 256), @p14='?' (Size = 256), @p15='?' (Size = 4000), @p16='?' (Size = 4000), @p17='?' (DbType = Boolean), @p18='?' (Size = 4000), @p19='?' (DbType = Int32), @p20='?' (Size = 4000), @p21='?' (DbType = Int32), @p22='?' (DbType = Boolean), @p23='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1);
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p2, [Address] = @p3, [ConcurrencyStamp] = @p4, [Email] = @p5, [EmailConfirmed] = @p6, [FirstName] = @p7, [LastName] = @p8, [LeaderID] = @p9, [LockoutEnabled] = @p10, [LockoutEnd] = @p11, [Major] = @p12, [NormalizedEmail] = @p13, [NormalizedUserName] = @p14, [PasswordHash] = @p15, [PhoneNumber] = @p16, [PhoneNumberConfirmed] = @p17, [PictureURL] = @p18, [Role] = @p19, [SecurityStamp] = @p20, [Status] = @p21, [TwoFactorEnabled] = @p22, [UserName] = @p23
+OUTPUT 1
+WHERE [Id] = @p24 AND [ConcurrencyStamp] = @p25;
+2025-04-09 22:25:55.665 +02:00 [INF] Executed DbCommand (76ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450), @p2='?' (Size = 450), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [AspNetUserRoles]
+OUTPUT 1
+WHERE [RoleId] = @p0 AND [UserId] = @p1;
+DELETE FROM [AspNetUsers]
+OUTPUT 1
+WHERE [Id] = @p2 AND [ConcurrencyStamp] = @p3;
+2025-04-09 22:25:55.711 +02:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2025-04-09 22:25:55.718 +02:00 [INF] Executed action secondVersionFlowSync.Controllers.AccountController.Register (secondVersionFlowSync) in 7390.0127ms
+2025-04-09 22:25:55.727 +02:00 [INF] Executed endpoint 'secondVersionFlowSync.Controllers.AccountController.Register (secondVersionFlowSync)'
+2025-04-09 22:25:55.733 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7142/api/Account/register - 500 null text/plain; charset=utf-8 7430.7255ms
+2025-04-09 22:57:58.230 +02:00 [INF] Executed DbCommand (151ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-04-09 22:57:58.532 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-04-09 22:57:58.711 +02:00 [INF] User profile is available. Using 'C:\Users\hp\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-09 22:57:58.929 +02:00 [INF] Now listening on: https://localhost:7142
+2025-04-09 22:57:58.933 +02:00 [INF] Now listening on: http://localhost:5249
+2025-04-09 22:57:58.940 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-09 22:57:58.944 +02:00 [INF] Hosting environment: Development
+2025-04-09 22:57:58.947 +02:00 [INF] Content root path: C:\Users\hp\Desktop\asp1\secondVersionFlowSync
+2025-04-09 22:58:00.396 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7142/swagger/index.html - null null
+2025-04-09 22:58:00.878 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7142/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-09 22:58:00.887 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7142/swagger/index.html - 200 null text/html;charset=utf-8 494.5944ms
+2025-04-09 22:58:00.891 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7142/_vs/browserLink - null null
+2025-04-09 22:58:00.908 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7142/_framework/aspnetcore-browser-refresh.js - 200 13778 application/javascript; charset=utf-8 30.3359ms
+2025-04-09 22:58:01.001 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7142/_vs/browserLink - 200 null text/javascript; charset=UTF-8 109.2436ms
+2025-04-09 22:58:01.215 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7142/swagger/v1/swagger.json - null null
+2025-04-09 22:58:01.659 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7142/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 443.9653ms
+2025-04-09 22:58:48.321 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7142/api/Account/register - application/json 163
+2025-04-09 22:58:48.427 +02:00 [INF] Executing endpoint 'secondVersionFlowSync.Controllers.AccountController.Register (secondVersionFlowSync)'
+2025-04-09 22:58:48.496 +02:00 [INF] Route matched with {action = "Register", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(secondVersionFlowSync.DTOs.Auth.RegisterDto) on controller secondVersionFlowSync.Controllers.AccountController (secondVersionFlowSync).
+2025-04-09 22:58:49.106 +02:00 [INF] Executed DbCommand (89ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LeaderID], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Major], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[PictureURL], [a].[Role], [a].[SecurityStamp], [a].[Status], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2025-04-09 22:58:49.162 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LeaderID], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Major], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[PictureURL], [a].[Role], [a].[SecurityStamp], [a].[Status], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-04-09 22:58:49.212 +02:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LeaderID], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Major], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[PictureURL], [a].[Role], [a].[SecurityStamp], [a].[Status], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Role] = 0
+2025-04-09 22:58:49.729 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LeaderID], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Major], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[PictureURL], [a].[Role], [a].[SecurityStamp], [a].[Status], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-04-09 22:58:50.574 +02:00 [INF] Executed DbCommand (26ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 255), @p3='?' (Size = 4000), @p4='?' (Size = 256), @p5='?' (DbType = Boolean), @p6='?' (Size = 50), @p7='?' (Size = 50), @p8='?' (Size = 450), @p9='?' (DbType = Boolean), @p10='?' (DbType = DateTimeOffset), @p11='?' (Size = 4000), @p12='?' (Size = 256), @p13='?' (Size = 256), @p14='?' (Size = 4000), @p15='?' (Size = 4000), @p16='?' (DbType = Boolean), @p17='?' (Size = 4000), @p18='?' (DbType = Int32), @p19='?' (Size = 4000), @p20='?' (DbType = Int32), @p21='?' (DbType = Boolean), @p22='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [Address], [ConcurrencyStamp], [Email], [EmailConfirmed], [FirstName], [LastName], [LeaderID], [LockoutEnabled], [LockoutEnd], [Major], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [PictureURL], [Role], [SecurityStamp], [Status], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21, @p22);
+2025-04-09 22:58:50.669 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2025-04-09 22:58:50.873 +02:00 [INF] Executed DbCommand (59ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE [a].[UserId] = @__p_0 AND [a].[RoleId] = @__p_1
+2025-04-09 22:58:50.899 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2025-04-09 22:58:50.965 +02:00 [INF] Executed DbCommand (9ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LeaderID], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Major], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[PictureURL], [a].[Role], [a].[SecurityStamp], [a].[Status], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-04-09 22:58:51.193 +02:00 [INF] Executed DbCommand (91ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450), @p24='?' (Size = 450), @p2='?' (DbType = Int32), @p3='?' (Size = 255), @p4='?' (Size = 4000), @p25='?' (Size = 4000), @p5='?' (Size = 256), @p6='?' (DbType = Boolean), @p7='?' (Size = 50), @p8='?' (Size = 50), @p9='?' (Size = 450), @p10='?' (DbType = Boolean), @p11='?' (DbType = DateTimeOffset), @p12='?' (Size = 4000), @p13='?' (Size = 256), @p14='?' (Size = 256), @p15='?' (Size = 4000), @p16='?' (Size = 4000), @p17='?' (DbType = Boolean), @p18='?' (Size = 4000), @p19='?' (DbType = Int32), @p20='?' (Size = 4000), @p21='?' (DbType = Int32), @p22='?' (DbType = Boolean), @p23='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1);
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p2, [Address] = @p3, [ConcurrencyStamp] = @p4, [Email] = @p5, [EmailConfirmed] = @p6, [FirstName] = @p7, [LastName] = @p8, [LeaderID] = @p9, [LockoutEnabled] = @p10, [LockoutEnd] = @p11, [Major] = @p12, [NormalizedEmail] = @p13, [NormalizedUserName] = @p14, [PasswordHash] = @p15, [PhoneNumber] = @p16, [PhoneNumberConfirmed] = @p17, [PictureURL] = @p18, [Role] = @p19, [SecurityStamp] = @p20, [Status] = @p21, [TwoFactorEnabled] = @p22, [UserName] = @p23
+OUTPUT 1
+WHERE [Id] = @p24 AND [ConcurrencyStamp] = @p25;
+2025-04-09 22:58:58.405 +02:00 [INF] Executed DbCommand (66ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450), @p2='?' (Size = 450), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [AspNetUserRoles]
+OUTPUT 1
+WHERE [RoleId] = @p0 AND [UserId] = @p1;
+DELETE FROM [AspNetUsers]
+OUTPUT 1
+WHERE [Id] = @p2 AND [ConcurrencyStamp] = @p3;
+2025-04-09 22:58:58.456 +02:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2025-04-09 22:58:58.479 +02:00 [INF] Executed action secondVersionFlowSync.Controllers.AccountController.Register (secondVersionFlowSync) in 9955.2724ms
+2025-04-09 22:58:58.487 +02:00 [INF] Executed endpoint 'secondVersionFlowSync.Controllers.AccountController.Register (secondVersionFlowSync)'
+2025-04-09 22:58:58.511 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7142/api/Account/register - 500 null text/plain; charset=utf-8 10190.4688ms
+2025-04-09 23:01:27.126 +02:00 [INF] Executed DbCommand (107ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-04-09 23:01:27.508 +02:00 [INF] Executed DbCommand (10ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-04-09 23:01:27.672 +02:00 [INF] User profile is available. Using 'C:\Users\hp\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-09 23:01:27.875 +02:00 [INF] Now listening on: https://localhost:7142
+2025-04-09 23:01:27.879 +02:00 [INF] Now listening on: http://localhost:5249
+2025-04-09 23:01:27.886 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-09 23:01:27.891 +02:00 [INF] Hosting environment: Development
+2025-04-09 23:01:27.894 +02:00 [INF] Content root path: C:\Users\hp\Desktop\asp1\secondVersionFlowSync
+2025-04-09 23:01:28.723 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7142/swagger/index.html - null null
+2025-04-09 23:01:29.294 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7142/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-09 23:01:29.303 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7142/_vs/browserLink - null null
+2025-04-09 23:01:29.320 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7142/swagger/index.html - 200 null text/html;charset=utf-8 600.0099ms
+2025-04-09 23:01:29.334 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7142/_framework/aspnetcore-browser-refresh.js - 200 13778 application/javascript; charset=utf-8 40.3089ms
+2025-04-09 23:01:29.411 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7142/_vs/browserLink - 200 null text/javascript; charset=UTF-8 107.9785ms
+2025-04-09 23:01:29.615 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7142/swagger/v1/swagger.json - null null
+2025-04-09 23:01:29.977 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7142/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 361.5551ms
+2025-04-09 23:01:49.113 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7142/api/Account/register - application/json 163
+2025-04-09 23:01:49.201 +02:00 [INF] Executing endpoint 'secondVersionFlowSync.Controllers.AccountController.Register (secondVersionFlowSync)'
+2025-04-09 23:01:49.317 +02:00 [INF] Route matched with {action = "Register", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(secondVersionFlowSync.DTOs.Auth.RegisterDto) on controller secondVersionFlowSync.Controllers.AccountController (secondVersionFlowSync).
+2025-04-09 23:01:49.809 +02:00 [INF] Executed DbCommand (11ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LeaderID], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Major], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[PictureURL], [a].[Role], [a].[SecurityStamp], [a].[Status], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2025-04-09 23:01:49.852 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LeaderID], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Major], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[PictureURL], [a].[Role], [a].[SecurityStamp], [a].[Status], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-04-09 23:01:49.914 +02:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LeaderID], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Major], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[PictureURL], [a].[Role], [a].[SecurityStamp], [a].[Status], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Role] = 0
+2025-04-09 23:01:50.419 +02:00 [INF] Executed DbCommand (19ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LeaderID], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Major], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[PictureURL], [a].[Role], [a].[SecurityStamp], [a].[Status], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-04-09 23:01:51.183 +02:00 [INF] Executed DbCommand (71ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 255), @p3='?' (Size = 4000), @p4='?' (Size = 256), @p5='?' (DbType = Boolean), @p6='?' (Size = 50), @p7='?' (Size = 50), @p8='?' (Size = 450), @p9='?' (DbType = Boolean), @p10='?' (DbType = DateTimeOffset), @p11='?' (Size = 4000), @p12='?' (Size = 256), @p13='?' (Size = 256), @p14='?' (Size = 4000), @p15='?' (Size = 4000), @p16='?' (DbType = Boolean), @p17='?' (Size = 4000), @p18='?' (DbType = Int32), @p19='?' (Size = 4000), @p20='?' (DbType = Int32), @p21='?' (DbType = Boolean), @p22='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [Address], [ConcurrencyStamp], [Email], [EmailConfirmed], [FirstName], [LastName], [LeaderID], [LockoutEnabled], [LockoutEnd], [Major], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [PictureURL], [Role], [SecurityStamp], [Status], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21, @p22);
+2025-04-09 23:01:51.298 +02:00 [INF] Executed DbCommand (9ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2025-04-09 23:01:51.437 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE [a].[UserId] = @__p_0 AND [a].[RoleId] = @__p_1
+2025-04-09 23:01:51.460 +02:00 [INF] Executed DbCommand (10ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2025-04-09 23:01:51.515 +02:00 [INF] Executed DbCommand (9ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LeaderID], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Major], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[PictureURL], [a].[Role], [a].[SecurityStamp], [a].[Status], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-04-09 23:01:51.691 +02:00 [INF] Executed DbCommand (42ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450), @p24='?' (Size = 450), @p2='?' (DbType = Int32), @p3='?' (Size = 255), @p4='?' (Size = 4000), @p25='?' (Size = 4000), @p5='?' (Size = 256), @p6='?' (DbType = Boolean), @p7='?' (Size = 50), @p8='?' (Size = 50), @p9='?' (Size = 450), @p10='?' (DbType = Boolean), @p11='?' (DbType = DateTimeOffset), @p12='?' (Size = 4000), @p13='?' (Size = 256), @p14='?' (Size = 256), @p15='?' (Size = 4000), @p16='?' (Size = 4000), @p17='?' (DbType = Boolean), @p18='?' (Size = 4000), @p19='?' (DbType = Int32), @p20='?' (Size = 4000), @p21='?' (DbType = Int32), @p22='?' (DbType = Boolean), @p23='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1);
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p2, [Address] = @p3, [ConcurrencyStamp] = @p4, [Email] = @p5, [EmailConfirmed] = @p6, [FirstName] = @p7, [LastName] = @p8, [LeaderID] = @p9, [LockoutEnabled] = @p10, [LockoutEnd] = @p11, [Major] = @p12, [NormalizedEmail] = @p13, [NormalizedUserName] = @p14, [PasswordHash] = @p15, [PhoneNumber] = @p16, [PhoneNumberConfirmed] = @p17, [PictureURL] = @p18, [Role] = @p19, [SecurityStamp] = @p20, [Status] = @p21, [TwoFactorEnabled] = @p22, [UserName] = @p23
+OUTPUT 1
+WHERE [Id] = @p24 AND [ConcurrencyStamp] = @p25;
+2025-04-09 23:01:58.934 +02:00 [INF] Executed DbCommand (34ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450), @p2='?' (Size = 450), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [AspNetUserRoles]
+OUTPUT 1
+WHERE [RoleId] = @p0 AND [UserId] = @p1;
+DELETE FROM [AspNetUsers]
+OUTPUT 1
+WHERE [Id] = @p2 AND [ConcurrencyStamp] = @p3;
+2025-04-09 23:01:58.970 +02:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2025-04-09 23:01:58.981 +02:00 [INF] Executed action secondVersionFlowSync.Controllers.AccountController.Register (secondVersionFlowSync) in 9648.5916ms
+2025-04-09 23:01:58.986 +02:00 [INF] Executed endpoint 'secondVersionFlowSync.Controllers.AccountController.Register (secondVersionFlowSync)'
+2025-04-09 23:01:59.002 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7142/api/Account/register - 500 null text/plain; charset=utf-8 9889.4864ms
+2025-04-09 23:03:03.510 +02:00 [INF] Executed DbCommand (111ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-04-09 23:03:03.880 +02:00 [INF] Executed DbCommand (14ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-04-09 23:03:04.115 +02:00 [INF] User profile is available. Using 'C:\Users\hp\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-09 23:03:04.370 +02:00 [INF] Now listening on: https://localhost:7142
+2025-04-09 23:03:04.373 +02:00 [INF] Now listening on: http://localhost:5249
+2025-04-09 23:03:04.382 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-09 23:03:04.387 +02:00 [INF] Hosting environment: Development
+2025-04-09 23:03:04.389 +02:00 [INF] Content root path: C:\Users\hp\Desktop\asp1\secondVersionFlowSync
+2025-04-09 23:03:05.045 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7142/swagger/index.html - null null
+2025-04-09 23:03:05.841 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7142/swagger/index.html - 200 null text/html;charset=utf-8 806.7035ms
+2025-04-09 23:03:05.864 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7142/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-09 23:03:05.861 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7142/_vs/browserLink - null null
+2025-04-09 23:03:05.946 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7142/_framework/aspnetcore-browser-refresh.js - 200 13778 application/javascript; charset=utf-8 84.1322ms
+2025-04-09 23:03:06.063 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7142/_vs/browserLink - 200 null text/javascript; charset=UTF-8 202.0858ms
+2025-04-09 23:03:06.213 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7142/swagger/v1/swagger.json - null null
+2025-04-09 23:03:06.563 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7142/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 349.5882ms
+2025-04-09 23:03:46.324 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7142/api/Account/register - application/json 163
+2025-04-09 23:03:46.431 +02:00 [INF] Executing endpoint 'secondVersionFlowSync.Controllers.AccountController.Register (secondVersionFlowSync)'
+2025-04-09 23:03:46.497 +02:00 [INF] Route matched with {action = "Register", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(secondVersionFlowSync.DTOs.Auth.RegisterDto) on controller secondVersionFlowSync.Controllers.AccountController (secondVersionFlowSync).
+2025-04-09 23:03:46.915 +02:00 [INF] Executed DbCommand (12ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LeaderID], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Major], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[PictureURL], [a].[Role], [a].[SecurityStamp], [a].[Status], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2025-04-09 23:03:46.955 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LeaderID], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Major], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[PictureURL], [a].[Role], [a].[SecurityStamp], [a].[Status], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-04-09 23:03:47.022 +02:00 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LeaderID], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Major], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[PictureURL], [a].[Role], [a].[SecurityStamp], [a].[Status], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Role] = 0
+2025-04-09 23:03:47.506 +02:00 [INF] Executed DbCommand (11ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LeaderID], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Major], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[PictureURL], [a].[Role], [a].[SecurityStamp], [a].[Status], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-04-09 23:03:48.376 +02:00 [INF] Executed DbCommand (73ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 255), @p3='?' (Size = 4000), @p4='?' (Size = 256), @p5='?' (DbType = Boolean), @p6='?' (Size = 50), @p7='?' (Size = 50), @p8='?' (Size = 450), @p9='?' (DbType = Boolean), @p10='?' (DbType = DateTimeOffset), @p11='?' (Size = 4000), @p12='?' (Size = 256), @p13='?' (Size = 256), @p14='?' (Size = 4000), @p15='?' (Size = 4000), @p16='?' (DbType = Boolean), @p17='?' (Size = 4000), @p18='?' (DbType = Int32), @p19='?' (Size = 4000), @p20='?' (DbType = Int32), @p21='?' (DbType = Boolean), @p22='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [Address], [ConcurrencyStamp], [Email], [EmailConfirmed], [FirstName], [LastName], [LeaderID], [LockoutEnabled], [LockoutEnd], [Major], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [PictureURL], [Role], [SecurityStamp], [Status], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21, @p22);
+2025-04-09 23:03:48.496 +02:00 [INF] Executed DbCommand (11ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2025-04-09 23:03:48.655 +02:00 [INF] Executed DbCommand (8ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE [a].[UserId] = @__p_0 AND [a].[RoleId] = @__p_1
+2025-04-09 23:03:48.693 +02:00 [INF] Executed DbCommand (11ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2025-04-09 23:03:48.775 +02:00 [INF] Executed DbCommand (12ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LeaderID], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Major], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[PictureURL], [a].[Role], [a].[SecurityStamp], [a].[Status], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-04-09 23:03:48.973 +02:00 [INF] Executed DbCommand (42ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450), @p24='?' (Size = 450), @p2='?' (DbType = Int32), @p3='?' (Size = 255), @p4='?' (Size = 4000), @p25='?' (Size = 4000), @p5='?' (Size = 256), @p6='?' (DbType = Boolean), @p7='?' (Size = 50), @p8='?' (Size = 50), @p9='?' (Size = 450), @p10='?' (DbType = Boolean), @p11='?' (DbType = DateTimeOffset), @p12='?' (Size = 4000), @p13='?' (Size = 256), @p14='?' (Size = 256), @p15='?' (Size = 4000), @p16='?' (Size = 4000), @p17='?' (DbType = Boolean), @p18='?' (Size = 4000), @p19='?' (DbType = Int32), @p20='?' (Size = 4000), @p21='?' (DbType = Int32), @p22='?' (DbType = Boolean), @p23='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1);
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p2, [Address] = @p3, [ConcurrencyStamp] = @p4, [Email] = @p5, [EmailConfirmed] = @p6, [FirstName] = @p7, [LastName] = @p8, [LeaderID] = @p9, [LockoutEnabled] = @p10, [LockoutEnd] = @p11, [Major] = @p12, [NormalizedEmail] = @p13, [NormalizedUserName] = @p14, [PasswordHash] = @p15, [PhoneNumber] = @p16, [PhoneNumberConfirmed] = @p17, [PictureURL] = @p18, [Role] = @p19, [SecurityStamp] = @p20, [Status] = @p21, [TwoFactorEnabled] = @p22, [UserName] = @p23
+OUTPUT 1
+WHERE [Id] = @p24 AND [ConcurrencyStamp] = @p25;
+2025-04-09 23:03:51.977 +02:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-09 23:03:52.005 +02:00 [INF] Executed action secondVersionFlowSync.Controllers.AccountController.Register (secondVersionFlowSync) in 5486.0352ms
+2025-04-09 23:03:52.012 +02:00 [INF] Executed endpoint 'secondVersionFlowSync.Controllers.AccountController.Register (secondVersionFlowSync)'
+2025-04-09 23:03:52.038 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7142/api/Account/register - 200 null application/json; charset=utf-8 5713.6968ms
+2025-04-09 23:04:21.234 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7142/api/Account/confirm-email?userId=97f73aa5-e87f-4c03-8252-89e760c74f2c&token=CfDJ8OmFpid0vUBHuJ3D5%2F2mOg%2BDhIyZ5yWfqbrey56%2FqIp3Shpt2zLCzYt1JS564ZmtaY5zdkH5b5n6o2pI5C%2BktrErIcq5o%2FAqz0exxzdoZyRHUV2j49RJ7saUA%2B%2FAtmiogZSLQBnXy3LdMSCdUudMM84Vkh7lbZYZZwhuJkkhp3Yto%2FwJbRIy4Nl%2BW9ZObKU2oh2tueeLb0w8mHjChX6lnqGZF75P4gWTRDGYELTnOjgPDKjfdN869XGJYB2diaaByQ%3D%3D - null null
+2025-04-09 23:04:21.274 +02:00 [INF] Executing endpoint 'secondVersionFlowSync.Controllers.AccountController.ConfirmEmail (secondVersionFlowSync)'
+2025-04-09 23:04:21.294 +02:00 [INF] Route matched with {action = "ConfirmEmail", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ConfirmEmail(System.String, System.String) on controller secondVersionFlowSync.Controllers.AccountController (secondVersionFlowSync).
+2025-04-09 23:04:21.434 +02:00 [INF] Executed DbCommand (12ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LeaderID], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Major], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[PictureURL], [a].[Role], [a].[SecurityStamp], [a].[Status], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0
+2025-04-09 23:04:21.486 +02:00 [INF] Executed DbCommand (29ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LeaderID], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Major], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[PictureURL], [a].[Role], [a].[SecurityStamp], [a].[Status], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-04-09 23:04:21.533 +02:00 [INF] Executed DbCommand (39ms) [Parameters=[@p22='?' (Size = 450), @p0='?' (DbType = Int32), @p1='?' (Size = 255), @p2='?' (Size = 4000), @p23='?' (Size = 4000), @p3='?' (Size = 256), @p4='?' (DbType = Boolean), @p5='?' (Size = 50), @p6='?' (Size = 50), @p7='?' (Size = 450), @p8='?' (DbType = Boolean), @p9='?' (DbType = DateTimeOffset), @p10='?' (Size = 4000), @p11='?' (Size = 256), @p12='?' (Size = 256), @p13='?' (Size = 4000), @p14='?' (Size = 4000), @p15='?' (DbType = Boolean), @p16='?' (Size = 4000), @p17='?' (DbType = Int32), @p18='?' (Size = 4000), @p19='?' (DbType = Int32), @p20='?' (DbType = Boolean), @p21='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [Address] = @p1, [ConcurrencyStamp] = @p2, [Email] = @p3, [EmailConfirmed] = @p4, [FirstName] = @p5, [LastName] = @p6, [LeaderID] = @p7, [LockoutEnabled] = @p8, [LockoutEnd] = @p9, [Major] = @p10, [NormalizedEmail] = @p11, [NormalizedUserName] = @p12, [PasswordHash] = @p13, [PhoneNumber] = @p14, [PhoneNumberConfirmed] = @p15, [PictureURL] = @p16, [Role] = @p17, [SecurityStamp] = @p18, [Status] = @p19, [TwoFactorEnabled] = @p20, [UserName] = @p21
+OUTPUT 1
+WHERE [Id] = @p22 AND [ConcurrencyStamp] = @p23;
+2025-04-09 23:04:21.580 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2025-04-09 23:04:21.586 +02:00 [INF] Executed action secondVersionFlowSync.Controllers.AccountController.ConfirmEmail (secondVersionFlowSync) in 285.5437ms
+2025-04-09 23:04:21.590 +02:00 [INF] Executed endpoint 'secondVersionFlowSync.Controllers.AccountController.ConfirmEmail (secondVersionFlowSync)'
+2025-04-09 23:04:21.596 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7142/api/Account/confirm-email?userId=97f73aa5-e87f-4c03-8252-89e760c74f2c&token=CfDJ8OmFpid0vUBHuJ3D5%2F2mOg%2BDhIyZ5yWfqbrey56%2FqIp3Shpt2zLCzYt1JS564ZmtaY5zdkH5b5n6o2pI5C%2BktrErIcq5o%2FAqz0exxzdoZyRHUV2j49RJ7saUA%2B%2FAtmiogZSLQBnXy3LdMSCdUudMM84Vkh7lbZYZZwhuJkkhp3Yto%2FwJbRIy4Nl%2BW9ZObKU2oh2tueeLb0w8mHjChX6lnqGZF75P4gWTRDGYELTnOjgPDKjfdN869XGJYB2diaaByQ%3D%3D - 200 null text/plain; charset=utf-8 362.3812ms
+2025-04-09 23:04:21.706 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7142/favicon.ico - null null
+2025-04-09 23:04:21.722 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7142/favicon.ico - 404 0 null 16.3214ms
+2025-04-09 23:04:21.735 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7142/favicon.ico, Response status code: 404
+2025-04-09 23:28:38.482 +02:00 [INF] Executed DbCommand (127ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-04-09 23:28:38.752 +02:00 [INF] Executed DbCommand (7ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-04-09 23:28:38.982 +02:00 [INF] User profile is available. Using 'C:\Users\hp\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-09 23:28:39.185 +02:00 [INF] Now listening on: https://localhost:7142
+2025-04-09 23:28:39.188 +02:00 [INF] Now listening on: http://localhost:5249
+2025-04-09 23:28:39.194 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-09 23:28:39.199 +02:00 [INF] Hosting environment: Development
+2025-04-09 23:28:39.201 +02:00 [INF] Content root path: C:\Users\hp\Desktop\asp1\secondVersionFlowSync
+2025-04-09 23:28:40.208 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7142/swagger/index.html - null null
+2025-04-09 23:28:40.765 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7142/swagger/index.html - 200 null text/html;charset=utf-8 566.4388ms
+2025-04-09 23:28:40.793 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7142/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-09 23:28:40.801 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7142/_vs/browserLink - null null
+2025-04-09 23:28:40.829 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7142/_framework/aspnetcore-browser-refresh.js - 200 13778 application/javascript; charset=utf-8 35.0085ms
+2025-04-09 23:28:40.934 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7142/_vs/browserLink - 200 null text/javascript; charset=UTF-8 133.0242ms
+2025-04-09 23:28:41.152 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7142/swagger/v1/swagger.json - null null
+2025-04-09 23:28:41.440 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7142/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 287.7278ms
+2025-04-09 23:28:59.325 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7142/api/account/register - application/json 150
+2025-04-09 23:28:59.492 +02:00 [INF] Executing endpoint 'secondVersionFlowSync.Controllers.AccountController.Register (secondVersionFlowSync)'
+2025-04-09 23:28:59.567 +02:00 [INF] Route matched with {action = "Register", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(secondVersionFlowSync.DTOs.Auth.RegisterDto) on controller secondVersionFlowSync.Controllers.AccountController (secondVersionFlowSync).
+2025-04-09 23:29:00.109 +02:00 [INF] Executed DbCommand (13ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LeaderID], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Major], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[PictureURL], [a].[Role], [a].[SecurityStamp], [a].[Status], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2025-04-09 23:29:00.152 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LeaderID], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Major], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[PictureURL], [a].[Role], [a].[SecurityStamp], [a].[Status], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-04-09 23:29:00.188 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Address], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LeaderID], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Major], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[PictureURL], [a].[Role], [a].[SecurityStamp], [a].[Status], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Role] = 0
+2025-04-09 23:29:00.503 +02:00 [INF] Executed action secondVersionFlowSync.Controllers.AccountController.Register (secondVersionFlowSync) in 913.8962ms
+2025-04-09 23:29:00.519 +02:00 [INF] Executed endpoint 'secondVersionFlowSync.Controllers.AccountController.Register (secondVersionFlowSync)'
+2025-04-09 23:29:00.541 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Exception: There is really only one team leader.
+   at secondVersionFlowSync.Controllers.AccountController.Register(RegisterDto model) in C:\Users\hp\Desktop\asp1\secondVersionFlowSync\Controllers\AccountController.cs:line 87
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-04-09 23:29:00.651 +02:00 [ERR] catch error: There is really only one team leader.
+System.Exception: There is really only one team leader.
+   at secondVersionFlowSync.Controllers.AccountController.Register(RegisterDto model) in C:\Users\hp\Desktop\asp1\secondVersionFlowSync\Controllers\AccountController.cs:line 87
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-04-09 23:29:00.730 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7142/api/account/register - 500 null application/json; charset=utf-8 1404.7939ms

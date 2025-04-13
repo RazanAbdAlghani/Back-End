@@ -1,6 +1,5 @@
 ﻿
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.EntityFrameworkCore;
 using secondVersionFlowSync.Data;
 using secondVersionFlowSync.Errors;
@@ -8,10 +7,8 @@ using secondVersionFlowSync.Models;
 using secondVersionFlowSync.services;
 using Serilog;
 using secondVersionFlowSync.services.EmailService;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
-using Microsoft.Extensions.Configuration;
 using System.Security.Claims;
 using Task = System.Threading.Tasks.Task;
 
@@ -119,7 +116,10 @@ namespace secondVersionFlowSync
 
             builder.Services.AddAuthorization();
 
-
+            builder.Services.AddRouting(options =>
+            {
+                options.LowercaseUrls = true;
+            });
 
             var app = builder.Build();
 

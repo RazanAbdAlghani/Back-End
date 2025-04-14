@@ -1,25 +1,20 @@
-# المرحلة الأولى: بناء المشروع
+# استخدم SDK الخاص بـ .NET 8
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+
 WORKDIR /app
 
 # نسخ ملفات المشروع
-COPY *.sln ./
-COPY secondVersionFlowSync/*.csproj ./secondVersionFlowSync/
+COPY *.csproj ./
 RUN dotnet restore
 
-# نسخ باقي الملفات وبناء المشروع
+# نسخ باقي الملفات
 COPY . ./
-WORKDIR /app/secondVersionFlowSync
-RUN dotnet publish -c Release -o /app/publish
+RUN dotnet publish -c Release -o out
 
-# المرحلة الثانية: تشغيل المشروع
-FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
+# المرحلة الثانية: فقط لتشغيل التطبيق (أخف)
+FROM mcr.microsoft.com/dotnet/aspnet:8.0
 WORKDIR /app
-COPY --from=build /app/publish .
+COPY --from=build /app/out .
 
-# تحديد البورت (يمكن تغييره حسب إعداداتك في المشروع)
-ENV ASPNETCORE_URLS=http://+:80
-EXPOSE 80
-
-# أمر التشغيل
+# تشغيل التطبيق
 ENTRYPOINT ["dotnet", "secondVersionFlowSync.dll"]
